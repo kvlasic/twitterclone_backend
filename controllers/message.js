@@ -21,6 +21,17 @@ async function getMessagesByUser(request, response) {
   response.send(res);
 }
 
+// async function getMessagesByUser(request, response) {
+//   const res = await Message.pre("find", function () {
+//     this.populate();
+//   });
+//   response.send(res);
+// }
+
+// ArticleSchema.pre('find', function () {
+//   this.populate({path: 'author', select: '-location -address'});
+// });
+
 const MessageController = {
   getAllMessages,
   getMessageByID,

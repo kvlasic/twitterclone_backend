@@ -1,10 +1,19 @@
 const mongoose = require("mongoose");
 
-const messageSchema = new mongoose.Schema(
+const MessageSchema = new mongoose.Schema(
   {
     message: { type: String, required: true },
+    userID: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "user",
+    },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("messages", messageSchema);
+MessageSchema.pre("find", function () {
+  this.populate("userID");
+});
+
+module.exports = mongoose.model("message", MessageSchema);
