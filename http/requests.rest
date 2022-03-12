@@ -8,3 +8,21 @@ Content-Type: application/json
 {
   "message": "Hello Tanja"
 }
+
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/622c69d95b23ea17c4af05e1
+
+###
+GET http://localhost:3000/users/random
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "tscapens3",
+  "avatar": "https://ozgrozer.github.io/100k-faces/0/6/006664.jpg"
+}
