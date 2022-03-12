@@ -2,6 +2,10 @@ GET http://localhost:3000/messages
 
 ###
 
+GET http://localhost:3000/messages/622c79c6fc13ae31e1000034
+
+###
+
 POST http://localhost:3000/messages
 Content-Type: application/json
 
